@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Dakwah</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .container {
+        background: white;
+        padding: 30px;
+        max-width: 600px;
+        margin: 50px auto;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        color: #28a745;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 10px 0;
+      }
+      .details {
+        background: #e2f7e1;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px 0;
+        text-align: left;
+      }
+      .details p {
+        margin: 8px 0;
+      }
+      button {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+      button:hover {
+        background: #218838;
+      }
+      .hidden {
+        display: none;
+      }
+      .confirmation-message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #28a745;
+        font-weight: bold;
+      }
+      .footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #777;
+      }
+      .map-container {
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .map-container iframe {
+        width: 100%;
+        height: 250px;
+        border: 0;
+      }
+      .icon {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Undangan Kajian Islam</h1>
+      <p>Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+      <p>
+        Dengan penuh hormat, kami mengundang Anda untuk menghadiri kajian dakwah
+        Islam yang insyaAllah akan diselenggarakan pada:
+      </p>
+      <div class="details">
+        <p>
+          <span class="icon">📖</span><strong>Tema:</strong> Menjadi Muslim yang
+          Lebih Baik
+        </p>
+        <p>
+          <span class="icon">🎤</span><strong>Pemateri:</strong> Ustadz Ahmad
+          Faiz
+        </p>
+        <p>
+          <span class="icon">⏰</span><strong>Waktu:</strong> Sabtu, 10 Februari
+          2025, pukul 09.00 WIB
+        </p>
+        <p>
+          <span class="icon">📍</span><strong>Tempat:</strong> Masjid Al-Ikhlas,
+          Jakarta
+        </p>
+      </div>
+
+      <!-- Tambahkan Google Maps -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.53190961806!2d106.76465207410148!3d-6.58059926432679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4f906e40827%3A0x6b93a4462670547c!2sSMK%20Infokom%20Kota%20Bogor!5e0!3m2!1sid!2sid!4v1739113678949!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <button onclick="confirmAttendance()">Konfirmasi Kehadiran</button>
+      <p id="confirmation" class="hidden confirmation-message">
+        Terima kasih atas konfirmasi Anda! 🙏
+      </p>
+      <div class="footer">
+        <p>
+          Semoga Allah memudahkan langkah kita untuk hadir. Barakallahu fiikum.
+        </p>
+      </div>
+    </div>
+    <script>
+      function confirmAttendance() {
+        const confirmationMessage = document.getElementById("confirmation");
+        confirmationMessage.classList.remove("hidden");
+        setTimeout(() => {
+          confirmationMessage.classList.add("hidden");
+        }, 3000); // Pesan akan hilang setelah 3 detik
+      }
+    </script>
+  </body>
+</html>
